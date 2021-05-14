@@ -19,9 +19,9 @@ It is a program that works from the command line of any linux-based terminal and
 
 #### Examples
 
-+ python bikeshare.py -c chicago -m may -d wednesday
-+ python bikeshare.py -c washington -m february
-+ python bikeshare.py -c 'New York City'
+    python bikeshare.py -c chicago -m may -d wednesday
+    python bikeshare.py -c washington -m february
+    python bikeshare.py -c 'New York City'
 
 ### Files used
 
