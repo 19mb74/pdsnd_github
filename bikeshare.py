@@ -31,6 +31,9 @@ def process_args():
     month = ('all' if (args.month == "") else args.month.lower())
     day = ('all' if (args.day == "") else args.day.lower())
 
+    # The following 3 if statements are used to detect errors. If the city is not one of the three cities that have statistical data, or
+    # the month is not correct, or the day of the week is incorrect, the program will exit gracefully, displaying an appropriate reason
+    # for exiting.
     if city not in CITY_DATA:
         print('Error: {} is not one of \'Chicago\', \'New York City\', \'Washington\'!'.format(city.title())) 
         print('Exiting...')
