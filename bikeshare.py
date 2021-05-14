@@ -247,8 +247,6 @@ def list_raw_data(df):
     print('-'*40)
 
 
-# clearConsole = lambda: os.system('cls' if os.name in ('nt', 'dos') else 'clear')
-
 
 def main():
     # clearConsole()
