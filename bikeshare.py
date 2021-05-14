@@ -123,7 +123,7 @@ def time_stats(df):
 
     
 def station_stats(df):
-    """Displays statistics on the most popular stations and trip."""
+    """Displays statistics about the most popular stations and trip."""
 
     print('\nCalculating The Most Popular Stations and Trip...\n')
     start_time = time.time()
@@ -136,13 +136,12 @@ def station_stats(df):
     print('\nMost commonly used ending station: {}'.format(df['End Station'].value_counts().idxmax()))
     print('\nEnd station hits for given time period: {}'.format(df['End Station'].value_counts()[0]))
 
-    # TO DO: display most frequent combination of start station and end station trip
-    
+    # TO DO: display most frequent combination of start station and end station journey(s)
     # Create a new dataframe that consists of only the start station and the end station columns
     df2 = pd.DataFrame(df['Start Station'])
     df2 = df2.join(df['End Station'])
     
-    # Group the dataframe by trips
+    # Group the dataframe by journeys
     journeys = df2.groupby(['Start Station','End Station']) 
     
     journey_dict = {}
@@ -153,7 +152,7 @@ def station_stats(df):
     # Calculate the highest value in the dictionary based on its values
     highest_number_of_trips = max(journey_dict.values())
     # Borrowed this next line of code from Lesson 4, Solutions 40, and the Alternative solution
-    # The idea is to loop through the dictionary and return the key (the trip) whose value matches the highest_number_of_trips
+    # The idea is to loop through the dictionary and return the key (the journey) whose value matches the highest_number_of_trips
     # This could of course be more than one key... see Washington, January, Monday, for example
     most_popular_trip = [key for key, value in journey_dict.items() if value == highest_number_of_trips]
     print("\nMost popular trip(s):\n{}".format(most_popular_trip))
