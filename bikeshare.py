@@ -214,7 +214,7 @@ def trip_duration_stats(df):
 
 def list_raw_data(df):
     
-    """Displays a listing of the raw data 5 rows at a time as requested by the user."""
+    """Displays a listing of the raw data 5 rows at a time as and if requested by the user."""
 
     print('\nListing raw data...\n')
     start_time = time.time()
