@@ -225,12 +225,6 @@ def list_raw_data(df):
     next_ctr = 5
     prev_ctr = 0
     df_len = len(df) - 1
-    
-    ## check what happens at the end of the dataframe without prompting user
-    # while next_ctr <= df_len:
-    #     print('\n{}'.format(df[prev_ctr:next_ctr]))
-    #     prev_ctr = next_ctr
-    #     next_ctr += 5
 
     while raw_data_request.lower() == 'y' and next_ctr <= df_len:
         print('\n{}'.format(df[prev_ctr:next_ctr]))
@@ -248,8 +242,6 @@ def list_raw_data(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-
-# clearConsole = lambda: os.system('cls' if os.name in ('nt', 'dos') else 'clear')
 
 
 def main():
